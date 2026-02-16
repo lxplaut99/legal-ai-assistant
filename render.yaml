@@ -9,8 +9,7 @@ services:
   - type: web
     name: legal-ai-backend
     runtime: docker
-    dockerfilePath: backend/Dockerfile
-    dockerContext: backend
+    rootDir: backend
     plan: starter
     envVars:
       - key: DATABASE_URL
