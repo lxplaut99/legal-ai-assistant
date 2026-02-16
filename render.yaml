@@ -9,7 +9,7 @@ services:
   - type: web
     name: legal-ai-backend
     runtime: docker
-    dockerfilePath: ./backend/Dockerfile
+    dockerfilePath: ./Dockerfile
     dockerContext: ./backend
     plan: starter
     envVars:
