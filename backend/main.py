@@ -1,3 +1,4 @@
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -10,6 +11,7 @@ from routers import chat, conversations, documents
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    os.makedirs(settings.upload_dir, exist_ok=True)
     await init_db()
     yield
 
